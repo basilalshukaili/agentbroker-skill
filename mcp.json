@@ -1,0 +1,13 @@
+{
+  "_comment": "AgentBroker MCP server config. 11 free tools need no key. Add X-Agent-Identity header for write tools.",
+  "mcpServers": {
+    "agentbroker": {
+      "url": "https://hatchloop.dev/mcp/agent-broker",
+      "transport": "streamable-http",
+      "_comment_key": "Remove this block entirely for free tools only. For write tools, set X-Agent-Identity to your bearer token.",
+      "headers": {
+        "X-Agent-Identity": "Bearer YOUR_KEY_HERE"
+      }
+    }
+  }
+}

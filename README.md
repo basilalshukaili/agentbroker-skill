@@ -1,0 +1,206 @@
+# AgentBroker MCP Skill
+
+Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cross-border trade-restriction mapping — as deterministic MCP tool calls. 11 tools free, no key required.
+
+**Endpoint:** `https://hatchloop.dev/mcp/agent-broker`  
+**Homepage:** https://hatchloop.dev/agent-broker/  
+**Protocol:** MCP streamable-HTTP (2025-03-26)  
+**Tools:** 19 total — 11 free (no key), 8 write tools (free email-verified key or $9/90d)
+
+---
+
+## Why install this
+
+The 11 free tools hit live primary sources on every call:
+
+- **`verify_company_record`** — GLEIF LEI database + SEC EDGAR. Real registry data, not hallucinated company info.
+- **`screen_sanctions`** — OFAC SDN + EU Consolidated + UN Security Council + UK HM Treasury + 40+ lists via OpenSanctions.
+- **`map_trade_restriction`** — OFAC country embargoes + US export-control Entity List, with official tariff-lookup links. No fabricated rates.
+- **`check_compliance`** — TCPA/GDPR/CASL/PDPL and 18 more jurisdictions. Free pre-flight before any outbound message.
+- **`find_business`, `verify_business`** — Search and confirm curated, transactable SMBs.
+- **`check_booking_link`, `preview_cost`, `get_status`, `get_outcome`, `self_test`** — Utility tools for safe, predictable agent flows.
+
+---
+
+## Install
+
+### Claude Desktop
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+
+```json
+{
+  "mcpServers": {
+    "agentbroker": {
+      "command": "npx",
+      "args": ["-y", "agentbroker-mcp"],
+      "env": {}
+    }
+  }
+}
+```
+
+Or point directly at the hosted endpoint (no local install):
+
+```json
+{
+  "mcpServers": {
+    "agentbroker": {
+      "url": "https://hatchloop.dev/mcp/agent-broker",
+      "transport": "streamable-http"
+    }
+  }
+}
+```
+
+For write tools (send_message, schedule_appointment, call_business, etc.), add your key:
+
+```json
+{
+  "mcpServers": {
+    "agentbroker": {
+      "url": "https://hatchloop.dev/mcp/agent-broker",
+      "transport": "streamable-http",
+      "headers": {
+        "X-Agent-Identity": "Bearer YOUR_KEY_HERE"
+      }
+    }
+  }
+}
+```
+
+Get a free key (50 write ops/day) at https://hatchloop.dev/agent-broker/
+
+---
+
+### Cursor
+
+Add to `.cursor/mcp.json` in your project, or `~/.cursor/mcp.json` globally:
+
+```json
+{
+  "mcpServers": {
+    "agentbroker": {
+      "url": "https://hatchloop.dev/mcp/agent-broker",
+      "transport": "streamable-http"
+    }
+  }
+}
+```
+
+With write-tool key:
+
+```json
+{
+  "mcpServers": {
+    "agentbroker": {
+      "url": "https://hatchloop.dev/mcp/agent-broker",
+      "transport": "streamable-http",
+      "headers": {
+        "X-Agent-Identity": "Bearer YOUR_KEY_HERE"
+      }
+    }
+  }
+}
+```
+
+---
+
+### Cline (VS Code Extension)
+
+Open Cline settings → MCP Servers → Add Server → Remote (SSE/HTTP):
+
+- **URL:** `https://hatchloop.dev/mcp/agent-broker`
+- **Transport:** Streamable HTTP
+
+Or add to your Cline MCP config file directly:
+
+```json
+{
+  "mcpServers": {
+    "agentbroker": {
+      "url": "https://hatchloop.dev/mcp/agent-broker",
+      "transport": "streamable-http"
+    }
+  }
+}
+```
+
+---
+
+### Windsurf
+
+Add to `~/.windsurf/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "agentbroker": {
+      "serverUrl": "https://hatchloop.dev/mcp/agent-broker"
+    }
+  }
+}
+```
+
+With key:
+
+```json
+{
+  "mcpServers": {
+    "agentbroker": {
+      "serverUrl": "https://hatchloop.dev/mcp/agent-broker",
+      "headers": {
+        "X-Agent-Identity": "Bearer YOUR_KEY_HERE"
+      }
+    }
+  }
+}
+```
+
+---
+
+### VS Code (GitHub Copilot Agent Mode)
+
+Add to `.vscode/mcp.json` in your workspace:
+
+```json
+{
+  "servers": {
+    "agentbroker": {
+      "url": "https://hatchloop.dev/mcp/agent-broker",
+      "type": "http"
+    }
+  }
+}
+```
+
+Or in your user `settings.json`:
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "agentbroker": {
+        "url": "https://hatchloop.dev/mcp/agent-broker",
+        "type": "http"
+      }
+    }
+  }
+}
+```
+
+---
+
+## Pricing
+
+| Tier | What you get |
+|---|---|
+| Free (no key) | 11 read tools: `verify_company_record`, `screen_sanctions`, `map_trade_restriction`, `check_compliance`, `find_business`, `verify_business`, `check_booking_link`, `preview_cost`, `get_status`, `get_outcome`, `self_test` |
+| Free key | + 8 write tools, 50 ops/day. Email-verified at https://hatchloop.dev/agent-broker/ |
+| $9 / 90 days | Unlimited ops, all 19 tools. [Buy via Polar](https://buy.polar.sh/polar_cl_zRn6I67zMjFuenkjDme5RCnDYmA3vefHqX1zG3A5Phh) |
+
+---
+
+## License
+
+MIT — see [LICENSE](./LICENSE)
