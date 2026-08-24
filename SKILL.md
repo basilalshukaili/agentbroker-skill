@@ -1,6 +1,6 @@
 # AgentBroker
 
-Verified GLEIF+SEC company records and OFAC/EU/UN sanctions + cross-border trade-restriction screening as deterministic MCP calls — structured every time, no browser to babysit. 11 tools free, no key.
+Verified GLEIF+SEC company records and OFAC/EU/UN sanctions + cross-border trade-restriction screening as deterministic MCP calls  -  structured every time, no browser to babysit. 11 tools free, no key.
 
 ---
 
@@ -14,7 +14,7 @@ AgentBroker is a streamable-HTTP MCP server that gives any agent a verified laye
 
 ---
 
-## Free tools — no key required (11 tools)
+## Free tools  -  no key required (11 tools)
 
 These 11 tools run against live data sources on every call. They are the reason to install this server: deterministic, primary-source responses that would otherwise require you to build and maintain integrations yourself.
 
@@ -22,7 +22,7 @@ These 11 tools run against live data sources on every call. They are the reason 
 |---|---|
 | `verify_company_record` | Live GLEIF LEI lookup + SEC EDGAR check. Returns registry-verified legal name, jurisdiction, LEI status, and filing links. No hallucinated company data. |
 | `screen_sanctions` | Checks a name or entity against OFAC SDN, EU Consolidated, UN Security Council, UK HM Treasury, and 40+ additional official watchlists via OpenSanctions. Returns match score, list names, and grounds. |
-| `map_trade_restriction` | OFAC country embargoes + US export-control Entity List + sanctioned-party screening for a proposed shipment. Returns restriction status and honest official tariff-lookup links — no fabricated rates. |
+| `map_trade_restriction` | OFAC country embargoes + US export-control Entity List + sanctioned-party screening for a proposed shipment. Returns restriction status and honest official tariff-lookup links  -  no fabricated rates. |
 | `check_compliance` | Pre-flight compliance check for TCPA (US), GDPR (EU), CASL (Canada), PDPL (Gulf), and 18 other jurisdictions. Returns consent requirements, opt-out rules, and a go/no-go verdict before an agent sends any message. |
 | `find_business` | Search curated, transactable SMBs by vertical (personal services, home services, professional services), location, and specific capability. Returns ranked candidates. |
 | `verify_business` | Confirm that a specific SMB has a stated capability before spending ops on booking or messaging. |
@@ -34,12 +34,12 @@ These 11 tools run against live data sources on every call. They are the reason 
 
 ---
 
-## Write tools — free key tier and paid tier (8 tools)
+## Write tools  -  free key tier and paid tier (8 tools)
 
 These tools perform real outbound actions. They require an `X-Agent-Identity` bearer token.
 
-**Free key:** 50 ops/day — email-verified at https://hatchloop.dev/agent-broker/  
-**Paid (credits):** Starter $9 -> 1,000 credits / Growth $29 -> 3,500 / Scale $99 -> 13,000 — buy at https://hatchloop.dev/pricing; or agents pay per-call via x402
+**Free key:** 50 ops/day  -  email-verified at https://hatchloop.dev/agent-broker/  
+**Paid (credits):** Starter $9 -> 1,000 credits / Growth $29 -> 3,500 / Scale $99 -> 13,000  -  buy at https://hatchloop.dev/pricing; or agents pay per-call via x402
 
 | Tool | What it does |
 |---|---|
@@ -66,7 +66,7 @@ Always call `check_compliance` before calling `send_message`. It is free and pre
 Call `preview_cost` before any write tool to confirm the op is within budget and likely to succeed.
 
 **Booking flow sequence:**  
-`find_business` → `verify_business` → `check_booking_link` → `preview_cost` → `schedule_appointment` → `get_status` → `get_outcome`
+`find_business` -> `verify_business` -> `check_booking_link` -> `preview_cost` -> `schedule_appointment` -> `get_status` -> `get_outcome`
 
 **Health check:**  
 Call `self_test` at the start of any session to confirm the server is reachable before building logic that depends on it.
@@ -76,5 +76,5 @@ Call `self_test` at the start of any session to confirm the server is reachable 
 ## What this is not
 
 - Not a general web-search tool. Use it only for the specific operations listed above.
-- `map_trade_restriction` returns restriction status and links to official tariff schedules — it does not fabricate tariff rates.
+- `map_trade_restriction` returns restriction status and links to official tariff schedules  -  it does not fabricate tariff rates.
 - Write tools (`send_message`, `call_business`, etc.) require a working provider configuration on the server side. They do not send messages out of the box without a key and configured provider.

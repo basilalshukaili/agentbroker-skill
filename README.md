@@ -1,11 +1,11 @@
 # AgentBroker MCP Skill
 
-Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cross-border trade-restriction mapping — as deterministic MCP tool calls. 11 tools free, no key required.
+Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cross-border trade-restriction mapping  -  as deterministic MCP tool calls. 11 tools free, no key required.
 
 **Endpoint:** `https://hatchloop.dev/mcp/agent-broker`  
 **Homepage:** https://hatchloop.dev/agent-broker/  
 **Protocol:** MCP streamable-HTTP (2025-03-26)  
-**Tools:** 19 total — 11 free (no key), 8 write tools (free email-verified key for 50 ops/day, or credits from $9/1,000 at https://hatchloop.dev/pricing)
+**Tools:** 19 total  -  11 free (no key), 8 write tools (free email-verified key for 50 ops/day, or credits from $9/1,000 at https://hatchloop.dev/pricing)
 
 ---
 
@@ -13,12 +13,12 @@ Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cros
 
 The 11 free tools hit live primary sources on every call:
 
-- **`verify_company_record`** — GLEIF LEI database + SEC EDGAR. Real registry data, not hallucinated company info.
-- **`screen_sanctions`** — OFAC SDN + EU Consolidated + UN Security Council + UK HM Treasury + 40+ lists via OpenSanctions.
-- **`map_trade_restriction`** — OFAC country embargoes + US export-control Entity List, with official tariff-lookup links. No fabricated rates.
-- **`check_compliance`** — TCPA/GDPR/CASL/PDPL and 18 more jurisdictions. Free pre-flight before any outbound message.
-- **`find_business`, `verify_business`** — Search and confirm curated, transactable SMBs.
-- **`check_booking_link`, `preview_cost`, `get_status`, `get_outcome`, `self_test`** — Utility tools for safe, predictable agent flows.
+- **`verify_company_record`**  -  GLEIF LEI database + SEC EDGAR. Real registry data, not hallucinated company info.
+- **`screen_sanctions`**  -  OFAC SDN + EU Consolidated + UN Security Council + UK HM Treasury + 40+ lists via OpenSanctions.
+- **`map_trade_restriction`**  -  OFAC country embargoes + US export-control Entity List, with official tariff-lookup links. No fabricated rates.
+- **`check_compliance`**  -  TCPA/GDPR/CASL/PDPL and 18 more jurisdictions. Free pre-flight before any outbound message.
+- **`find_business`, `verify_business`**  -  Search and confirm curated, transactable SMBs.
+- **`check_booking_link`, `preview_cost`, `get_status`, `get_outcome`, `self_test`**  -  Utility tools for safe, predictable agent flows.
 
 ---
 
@@ -108,7 +108,7 @@ With write-tool key:
 
 ### Cline (VS Code Extension)
 
-Open Cline settings → MCP Servers → Add Server → Remote (SSE/HTTP):
+Open Cline settings -> MCP Servers -> Add Server -> Remote (SSE/HTTP):
 
 - **URL:** `https://hatchloop.dev/mcp/agent-broker`
 - **Transport:** Streamable HTTP
@@ -203,4 +203,4 @@ Or in your user `settings.json`:
 
 ## License
 
-MIT — see [LICENSE](./LICENSE)
+MIT  -  see [LICENSE](./LICENSE)
