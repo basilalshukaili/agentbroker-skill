@@ -13,7 +13,7 @@ Add the following line to the **Business & Automation** section of `README.md`.
 If no such section exists, use the **Finance** section, or the closest section covering compliance/legal/verification.
 
 ```markdown
-- [Agent Broker](https://github.com/basilalshukaili/agentbroker-skill) - Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cross-border trade-restriction mapping. 11 read tools free (no key); write tools (SMS, booking, voice calls) via free email key or $9/90d. [MCP endpoint](https://hatchloop.dev/mcp/agent-broker)
+- [Agent Broker](https://github.com/basilalshukaili/agentbroker-skill) - Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cross-border trade-restriction mapping. 11 read tools free (no key); write tools (SMS, booking, voice calls) use credits: free email key (50 ops/day) or packages from $9/1,000 credits at https://hatchloop.dev/pricing. [MCP endpoint](https://hatchloop.dev/mcp/agent-broker)
 ```
 
 ---

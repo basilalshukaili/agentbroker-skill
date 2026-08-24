@@ -5,7 +5,7 @@ Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cros
 **Endpoint:** `https://hatchloop.dev/mcp/agent-broker`  
 **Homepage:** https://hatchloop.dev/agent-broker/  
 **Protocol:** MCP streamable-HTTP (2025-03-26)  
-**Tools:** 19 total — 11 free (no key), 8 write tools (free email-verified key or $9/90d)
+**Tools:** 19 total — 11 free (no key), 8 write tools (free email-verified key for 50 ops/day, or credits from $9/1,000 at https://hatchloop.dev/pricing)
 
 ---
 
@@ -197,7 +197,7 @@ Or in your user `settings.json`:
 |---|---|
 | Free (no key) | 11 read tools: `verify_company_record`, `screen_sanctions`, `map_trade_restriction`, `check_compliance`, `find_business`, `verify_business`, `check_booking_link`, `preview_cost`, `get_status`, `get_outcome`, `self_test` |
 | Free key | + 8 write tools, 50 ops/day. Email-verified at https://hatchloop.dev/agent-broker/ |
-| $9 / 90 days | Unlimited ops, all 19 tools. [Buy via Polar](https://buy.polar.sh/polar_cl_zRn6I67zMjFuenkjDme5RCnDYmA3vefHqX1zG3A5Phh) |
+| Credits | Starter $9/1,000 write ops, Growth $29/3,500, Scale $99/13,000. [Buy credits](https://hatchloop.dev/pricing) or agents pay per-call via x402. |
 
 ---
 

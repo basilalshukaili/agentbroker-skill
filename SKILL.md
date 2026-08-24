@@ -39,7 +39,7 @@ These 11 tools run against live data sources on every call. They are the reason 
 These tools perform real outbound actions. They require an `X-Agent-Identity` bearer token.
 
 **Free key:** 50 ops/day — email-verified at https://hatchloop.dev/agent-broker/  
-**Paid:** $9 / 90 days via Polar — unlimited ops, all 19 tools
+**Paid (credits):** Starter $9 -> 1,000 credits / Growth $29 -> 3,500 / Scale $99 -> 13,000 — buy at https://hatchloop.dev/pricing; or agents pay per-call via x402
 
 | Tool | What it does |
 |---|---|
