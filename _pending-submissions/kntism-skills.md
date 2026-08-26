@@ -15,7 +15,7 @@ Add to the **Business & Compliance** section (create if absent) in `README.md`:
 
 ```markdown
 ###  Business & Compliance
-- **[agentbroker](https://github.com/basilalshukaili/agentbroker-skill)** - Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cross-border trade-restriction mapping. 11 read tools free (no key). Write tools for SMS, booking, and voice calls use credits: free email key (50 ops/day) or packages from $9/1,000 credits at https://hatchloop.dev/pricing. MCP endpoint: `https://hatchloop.dev/mcp/agent-broker`
+- **[agentbroker](https://github.com/basilalshukaili/agentbroker-skill)** - Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cross-border trade-restriction mapping. 11 read tools free (no key). Write tools for SMS, booking, and voice calls use credits: free email key (100 ops/day) or packages from $9/1,000 credits at https://hatchloop.dev/pricing. MCP endpoint: `https://hatchloop.dev/mcp/agent-broker`
 ```
 
 If adding to an existing section (Data & Research or similar), use:
@@ -51,7 +51,7 @@ git push -u origin add-agentbroker-skill
 MSYS_NO_PATHCONV=1 gh pr create \
   --repo kntism/skills \
   --title "Add agentbroker  -  live GLEIF/OFAC sanctions + company verification agent skill" \
-  --body "agentbroker is a SKILL.md-format agent skill that installs a hosted MCP server (streamable-HTTP) providing: live GLEIF LEI + SEC EDGAR company verification, OFAC/EU/UN/UK+40 sanctions screening, cross-border trade-restriction mapping, TCPA/GDPR/CASL compliance pre-flight (22 jurisdictions), SMB search/verify, booking link checks, and async op tracking. 11 tools free, no key. Write tools (SMS, booking, voice) use credits: free email key (50 ops/day) or packages from $9/1,000 credits at https://hatchloop.dev/pricing. Skill repo: https://github.com/basilalshukaili/agentbroker-skill"
+  --body "agentbroker is a SKILL.md-format agent skill that installs a hosted MCP server (streamable-HTTP) providing: live GLEIF LEI + SEC EDGAR company verification, OFAC/EU/UN/UK+40 sanctions screening, cross-border trade-restriction mapping, TCPA/GDPR/CASL compliance pre-flight (22 jurisdictions), SMB search/verify, booking link checks, and async op tracking. 11 tools free, no key. Write tools (SMS, booking, voice) use credits: free email key (100 ops/day) or packages from $9/1,000 credits at https://hatchloop.dev/pricing. Skill repo: https://github.com/basilalshukaili/agentbroker-skill"
 ```
 
 ---

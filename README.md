@@ -1,24 +1,29 @@
 # AgentBroker MCP Skill
 
-Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cross-border trade-restriction mapping  -  as deterministic MCP tool calls. 11 tools free, no key required.
+Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cross-border trade-restriction mapping  -  as deterministic MCP tool calls. 8 utility tools free (no key, unmetered). Premium data tools free up to a daily limit, then $0.02/call.
 
 **Endpoint:** `https://hatchloop.dev/mcp/agent-broker`  
 **Homepage:** https://hatchloop.dev/agent-broker/  
 **Protocol:** MCP streamable-HTTP (2025-03-26)  
-**Tools:** 19 total  -  11 free (no key), 8 write tools (free email-verified key for 50 ops/day, or credits from $9/1,000 at https://hatchloop.dev/pricing)
+**Tools:** 20 total  -  8 utility tools (no key, unmetered free), 3 premium data tools (free up to daily limit, then $0.02/call), 8 write tools (free email-verified key for 100 ops/day, or credits from $9/1,000 at https://hatchloop.dev/pricing)
 
 ---
 
 ## Why install this
 
-The 11 free tools hit live primary sources on every call:
+8 utility tools are unconditionally free (no key, no daily limit):
 
-- **`verify_company_record`**  -  GLEIF LEI database + SEC EDGAR. Real registry data, not hallucinated company info.
-- **`screen_sanctions`**  -  OFAC SDN + EU Consolidated + UN Security Council + UK HM Treasury + 40+ lists via OpenSanctions.
-- **`map_trade_restriction`**  -  OFAC country embargoes + US export-control Entity List, with official tariff-lookup links. No fabricated rates.
 - **`check_compliance`**  -  TCPA/GDPR/CASL/PDPL and 18 more jurisdictions. Free pre-flight before any outbound message.
 - **`find_business`, `verify_business`**  -  Search and confirm curated, transactable SMBs.
 - **`check_booking_link`, `preview_cost`, `get_status`, `get_outcome`, `self_test`**  -  Utility tools for safe, predictable agent flows.
+
+3 premium data tools hit live primary sources and are free up to a daily limit:
+
+- **`verify_company_record`**  -  GLEIF LEI database + SEC EDGAR. Real registry data, not hallucinated company info. Free up to 500/day (verified key) or 100/day (anonymous).
+- **`screen_sanctions`**  -  OFAC SDN + EU Consolidated + UN Security Council + UK HM Treasury + 40+ lists via OpenSanctions. Free up to 500/day (verified key) or 100/day (anonymous).
+- **`map_trade_restriction`**  -  OFAC country embargoes + US export-control Entity List, with official tariff-lookup links. No fabricated rates. Free up to 500/day (verified key) or 100/day (anonymous).
+
+Beyond the daily limit: $0.02/call via credits or x402.
 
 ---
 
@@ -69,7 +74,7 @@ For write tools (send_message, schedule_appointment, call_business, etc.), add y
 }
 ```
 
-Get a free key (50 write ops/day) at https://hatchloop.dev/agent-broker/
+Get a free key (100 write ops/day) at https://hatchloop.dev/agent-broker/
 
 ---
 
@@ -195,9 +200,10 @@ Or in your user `settings.json`:
 
 | Tier | What you get |
 |---|---|
-| Free (no key) | 11 read tools: `verify_company_record`, `screen_sanctions`, `map_trade_restriction`, `check_compliance`, `find_business`, `verify_business`, `check_booking_link`, `preview_cost`, `get_status`, `get_outcome`, `self_test` |
-| Free key | + 8 write tools, 50 ops/day. Email-verified at https://hatchloop.dev/agent-broker/ |
-| Credits | Starter $9/1,000 write ops, Growth $29/3,500, Scale $99/13,000. [Buy credits](https://hatchloop.dev/pricing) or agents pay per-call via x402. |
+| Free (no key) | 8 utility tools: `check_compliance`, `find_business`, `verify_business`, `check_booking_link`, `preview_cost`, `get_status`, `get_outcome`, `self_test`  -  no key, unmetered |
+| Free (no key, daily limit) | 3 premium data tools: `verify_company_record`, `screen_sanctions`, `map_trade_restriction`  -  100 calls/day anonymous, 500 calls/day with a free email-verified key |
+| Free key | + 8 write tools, 100 ops/day. Email-verified at https://hatchloop.dev/agent-broker/ |
+| Credits / x402 | Premium data tools beyond daily limit: $0.02/call. Write tools: Starter $9/1,000 credits, Growth $29/3,500, Scale $99/13,000. [Buy credits](https://hatchloop.dev/pricing) or agents pay per-call via x402. |
 
 ---
 

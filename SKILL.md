@@ -1,6 +1,6 @@
 # AgentBroker
 
-Verified GLEIF+SEC company records and OFAC/EU/UN sanctions + cross-border trade-restriction screening as deterministic MCP calls  -  structured every time, no browser to babysit. 11 tools free, no key.
+Verified GLEIF+SEC company records and OFAC/EU/UN sanctions + cross-border trade-restriction screening as deterministic MCP calls  -  structured every time, no browser to babysit. 8 utility tools free (no key). Premium data tools free up to a daily limit, then $0.02/call.
 
 ---
 
@@ -14,15 +14,12 @@ AgentBroker is a streamable-HTTP MCP server that gives any agent a verified laye
 
 ---
 
-## Free tools  -  no key required (11 tools)
+## Utility tools  -  no key required, unmetered (8 tools)
 
-These 11 tools run against live data sources on every call. They are the reason to install this server: deterministic, primary-source responses that would otherwise require you to build and maintain integrations yourself.
+These 8 tools are always free with no daily limit. They are the discovery hook and safe pre-flight checks.
 
 | Tool | What it does |
 |---|---|
-| `verify_company_record` | Live GLEIF LEI lookup + SEC EDGAR check. Returns registry-verified legal name, jurisdiction, LEI status, and filing links. No hallucinated company data. |
-| `screen_sanctions` | Checks a name or entity against OFAC SDN, EU Consolidated, UN Security Council, UK HM Treasury, and 40+ additional official watchlists via OpenSanctions. Returns match score, list names, and grounds. |
-| `map_trade_restriction` | OFAC country embargoes + US export-control Entity List + sanctioned-party screening for a proposed shipment. Returns restriction status and honest official tariff-lookup links  -  no fabricated rates. |
 | `check_compliance` | Pre-flight compliance check for TCPA (US), GDPR (EU), CASL (Canada), PDPL (Gulf), and 18 other jurisdictions. Returns consent requirements, opt-out rules, and a go/no-go verdict before an agent sends any message. |
 | `find_business` | Search curated, transactable SMBs by vertical (personal services, home services, professional services), location, and specific capability. Returns ranked candidates. |
 | `verify_business` | Confirm that a specific SMB has a stated capability before spending ops on booking or messaging. |
@@ -34,11 +31,25 @@ These 11 tools run against live data sources on every call. They are the reason 
 
 ---
 
+## Premium data tools  -  free up to a daily limit (3 tools)
+
+These tools hit live primary data sources (GLEIF, SEC EDGAR, OFAC, OpenSanctions) on every call. They are free within a daily per-caller quota; beyond the quota, they charge $0.02/call via credits or x402.
+
+| Tool | Free daily quota | What it does |
+|---|---|---|
+| `verify_company_record` | 500/day (free key), 100/day (anon) | Live GLEIF LEI lookup + SEC EDGAR check. Returns registry-verified legal name, jurisdiction, LEI status, and filing links. No hallucinated company data. |
+| `screen_sanctions` | 500/day (free key), 100/day (anon) | Checks a name or entity against OFAC SDN, EU Consolidated, UN Security Council, UK HM Treasury, and 40+ additional official watchlists via OpenSanctions. Returns match score, list names, and grounds. |
+| `map_trade_restriction` | 500/day (free key), 100/day (anon) | OFAC country embargoes + US export-control Entity List + sanctioned-party screening for a proposed shipment. Returns restriction status and honest official tariff-lookup links  -  no fabricated rates. |
+
+**Beyond the daily quota:** the tool returns an honest failure (`reason_code: free_quota_exceeded`, `cost: $0`). Escape paths: get a free email-verified key at https://hatchloop.dev/agent-broker, top up credits at https://hatchloop.dev/pricing, or pay per call via x402 ($0.02/call).
+
+---
+
 ## Write tools  -  free key tier and paid tier (8 tools)
 
 These tools perform real outbound actions. They require an `X-Agent-Identity` bearer token.
 
-**Free key:** 50 ops/day  -  email-verified at https://hatchloop.dev/agent-broker/  
+**Free key:** 100 ops/day  -  email-verified at https://hatchloop.dev/agent-broker/  
 **Paid (credits):** Starter $9 -> 1,000 credits / Growth $29 -> 3,500 / Scale $99 -> 13,000  -  buy at https://hatchloop.dev/pricing; or agents pay per-call via x402
 
 | Tool | What it does |
