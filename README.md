@@ -1,6 +1,6 @@
 # AgentBroker MCP Skill
 
-Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cross-border trade-restriction mapping  -  as deterministic MCP tool calls. 8 utility tools free (no key, unmetered). Premium data tools free up to a daily limit, then $0.02/call.
+Live GLEIF+SEC company verification, OFAC/EU/UK sanctions screening, and cross-border trade-restriction mapping  -  as deterministic MCP tool calls. 8 utility tools free (no key, unmetered). Premium data tools free up to a daily limit, then $0.02/call.
 
 **Endpoint:** `https://hatchloop.dev/mcp/agent-broker`  
 **Homepage:** https://hatchloop.dev/agent-broker/  
@@ -20,10 +20,10 @@ Live GLEIF+SEC company verification, OFAC/EU/UN/UK sanctions screening, and cros
 3 premium data tools hit live primary sources and are free up to a daily limit:
 
 - **`verify_company_record`**  -  GLEIF LEI database + SEC EDGAR. Real registry data, not hallucinated company info. Free up to 500/day (verified key) or 100/day (anonymous).
-- **`screen_sanctions`**  -  OFAC SDN + EU Consolidated + UN Security Council + UK HM Treasury + 40+ lists via OpenSanctions. Free up to 500/day (verified key) or 100/day (anonymous).
+- **`screen_sanctions`**  -  OFAC SDN + the EU Consolidated list + the UK Sanctions List. Free up to 500/day (verified key) or 100/day (anonymous).
 - **`map_trade_restriction`**  -  OFAC country embargoes + US export-control Entity List, with official tariff-lookup links. No fabricated rates. Free up to 500/day (verified key) or 100/day (anonymous).
 
-Beyond the daily limit: $0.02/call via credits or x402.
+Beyond the daily limit: $0.02/call via credits. Crypto payment is not offered.
 
 ---
 
@@ -203,7 +203,7 @@ Or in your user `settings.json`:
 | Free (no key) | 8 utility tools: `check_compliance`, `find_business`, `verify_business`, `check_booking_link`, `preview_cost`, `get_status`, `get_outcome`, `self_test`  -  no key, unmetered |
 | Free (no key, daily limit) | 3 premium data tools: `verify_company_record`, `screen_sanctions`, `map_trade_restriction`  -  100 calls/day anonymous, 500 calls/day with a free email-verified key |
 | Free key | + 8 write tools, 100 ops/day. Email-verified at https://hatchloop.dev/agent-broker/ |
-| Credits / x402 | Premium data tools beyond daily limit: $0.02/call. Write tools: Starter $9/1,000 credits, Growth $29/3,500, Scale $99/13,000. [Buy credits](https://hatchloop.dev/pricing) or agents pay per-call via x402. |
+| Credits | Premium data tools beyond daily limit: $0.02/call. Write tools: Starter $9/1,000 credits, Growth $29/3,500, Scale $99/13,000. [Buy credits](https://hatchloop.dev/pricing). Crypto payment is not offered. |
 
 ---
 

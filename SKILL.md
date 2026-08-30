@@ -1,6 +1,6 @@
 # AgentBroker
 
-Verified GLEIF+SEC company records and OFAC/EU/UN sanctions + cross-border trade-restriction screening as deterministic MCP calls  -  structured every time, no browser to babysit. 8 utility tools free (no key). Premium data tools free up to a daily limit, then $0.02/call.
+Verified GLEIF+SEC company records and OFAC/EU/UK sanctions + cross-border trade-restriction screening as deterministic MCP calls  -  structured every time, no browser to babysit. 8 utility tools free (no key). Premium data tools free up to a daily limit, then $0.02/call.
 
 ---
 
@@ -33,15 +33,15 @@ These 8 tools are always free with no daily limit. They are the discovery hook a
 
 ## Premium data tools  -  free up to a daily limit (3 tools)
 
-These tools hit live primary data sources (GLEIF, SEC EDGAR, OFAC, OpenSanctions) on every call. They are free within a daily per-caller quota; beyond the quota, they charge $0.02/call via credits or x402.
+These tools hit live primary data sources (GLEIF, SEC EDGAR, OFAC, European Commission, UK FCDO) on every call. They are free within a daily per-caller quota; beyond the quota, they charge $0.02/call via credits.
 
 | Tool | Free daily quota | What it does |
 |---|---|---|
 | `verify_company_record` | 500/day (free key), 100/day (anon) | Live GLEIF LEI lookup + SEC EDGAR check. Returns registry-verified legal name, jurisdiction, LEI status, and filing links. No hallucinated company data. |
-| `screen_sanctions` | 500/day (free key), 100/day (anon) | Checks a name or entity against OFAC SDN, EU Consolidated, UN Security Council, UK HM Treasury, and 40+ additional official watchlists via OpenSanctions. Returns match score, list names, and grounds. |
+| `screen_sanctions` | 500/day (free key), 100/day (anon) | Checks a name or entity against OFAC SDN, the EU Consolidated list and the UK Sanctions List. Matching is UNCALIBRATED word-overlap: a match is asserted only when the normalised token sets are identical, and near-misses come back as possible_matches_unverified. The score is a similarity number, not a validated confidence. |
 | `map_trade_restriction` | 500/day (free key), 100/day (anon) | OFAC country embargoes + US export-control Entity List + sanctioned-party screening for a proposed shipment. Returns restriction status and honest official tariff-lookup links  -  no fabricated rates. |
 
-**Beyond the daily quota:** the tool returns an honest failure (`reason_code: free_quota_exceeded`, `cost: $0`). Escape paths: get a free email-verified key at https://hatchloop.dev/agent-broker, top up credits at https://hatchloop.dev/pricing, or pay per call via x402 ($0.02/call).
+**Beyond the daily quota:** the tool returns an honest failure (`reason_code: free_quota_exceeded`, `cost: $0`). Escape paths: get a free email-verified key at https://hatchloop.dev/agent-broker, or top up credits at https://hatchloop.dev/pricing ($0.02/call). Card only - crypto payment is not offered.
 
 ---
 
@@ -50,7 +50,7 @@ These tools hit live primary data sources (GLEIF, SEC EDGAR, OFAC, OpenSanctions
 These tools perform real outbound actions. They require an `X-Agent-Identity` bearer token.
 
 **Free key:** 100 ops/day  -  email-verified at https://hatchloop.dev/agent-broker/  
-**Paid (credits):** Starter $9 -> 1,000 credits / Growth $29 -> 3,500 / Scale $99 -> 13,000  -  buy at https://hatchloop.dev/pricing; or agents pay per-call via x402
+**Paid (credits):** Starter $9 -> 1,000 credits / Growth $29 -> 3,500 / Scale $99 -> 13,000  -  buy at https://hatchloop.dev/pricing;
 
 | Tool | What it does |
 |---|---|
