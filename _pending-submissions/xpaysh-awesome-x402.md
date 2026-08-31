@@ -42,7 +42,7 @@ contracting party is Omani.
 Add to the **MCP Integration** or **Services & APIs** section (whichever lists entries like Octodamus, Kaisha, Sirenic, etc.) in `README.md`:
 
 ```markdown
-- [Agent Broker](https://hatchloop.dev/agent-broker/) - Live GLEIF+SEC company verification, OFAC/EU/UK sanctions screening, and cross-border trade-restriction mapping as MCP calls. 12 of 21 tools need no key. Write tools (SMS, booking, voice calls to SMBs) use credits (Starter $9/1,000, Growth $29/3,500, Scale $99/13,000 at https://hatchloop.dev/pricing) or x402 pay-per-call (USDC on Base, no signup). MCP: `https://hatchloop.dev/mcp/agent-broker`. ([Skill/Install](https://github.com/basilalshukaili/agentbroker-skill) | [MCP](https://hatchloop.dev/mcp/agent-broker))
+- [Agent Broker](https://hatchloop.dev/agent-broker/) - Live GLEIF+SEC company verification, OFAC/EU/UK sanctions screening, and cross-border trade-restriction mapping as MCP calls. 12 of 22 tools need no key. Write tools (SMS, booking, voice calls to SMBs) use credits (Starter $9/1,000, Growth $29/3,500, Scale $99/13,000 at https://hatchloop.dev/pricing) or x402 pay-per-call (USDC on Base, no signup). MCP: `https://hatchloop.dev/mcp/agent-broker`. ([Skill/Install](https://github.com/basilalshukaili/agentbroker-skill) | [MCP](https://hatchloop.dev/mcp/agent-broker))
 ```
 
 ---
@@ -72,7 +72,7 @@ git push -u origin add-agentbroker
 MSYS_NO_PATHCONV=1 gh pr create \
   --repo xpaysh/awesome-x402 \
   --title "Add Agent Broker  -  live GLEIF/OFAC/sanctions MCP server (x402 billing)" \
-  --body "Agent Broker is a hosted MCP server (streamable-HTTP) providing live GLEIF LEI + SEC EDGAR company verification, OFAC/EU/UK sanctions screening, and cross-border trade-restriction mapping. 12 of 21 tools need no key. Write tools (messaging, booking, voice) use a credits model (Starter \$9/1,000 credits at https://hatchloop.dev/pricing) or x402 pay-per-call (USDC on Base, no signup). Endpoint: https://hatchloop.dev/mcp/agent-broker  -  install guide: https://github.com/basilalshukaili/agentbroker-skill"
+  --body "Agent Broker is a hosted MCP server (streamable-HTTP) providing live GLEIF LEI + SEC EDGAR company verification, OFAC/EU/UK sanctions screening, and cross-border trade-restriction mapping. 12 of 22 tools need no key. Write tools (messaging, booking, voice) use a credits model (Starter \$9/1,000 credits at https://hatchloop.dev/pricing) or x402 pay-per-call (USDC on Base, no signup). Endpoint: https://hatchloop.dev/mcp/agent-broker  -  install guide: https://github.com/basilalshukaili/agentbroker-skill"
 ```
 
 ---
