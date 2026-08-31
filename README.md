@@ -5,7 +5,7 @@ Live GLEIF+SEC company verification, OFAC/EU/UK sanctions screening, and cross-b
 **Endpoint:** `https://hatchloop.dev/mcp/agent-broker`  
 **Homepage:** https://hatchloop.dev/agent-broker/  
 **Protocol:** MCP streamable-HTTP (2025-03-26)  
-**Tools:** 20 total  -  8 utility tools (no key, unmetered free), 3 premium data tools (free up to daily limit, then $0.02/call), 8 write tools (free email-verified key for 100 ops/day, or credits from $9/1,000 at https://hatchloop.dev/pricing)
+**Tools:** 21 total  -  8 utility tools (no key, unmetered free), 3 premium data tools (free up to daily limit, then $0.02/call), 8 write tools (free email-verified key for 100 ops/day, or credits from $9/1,000 at https://hatchloop.dev/pricing)
 
 ---
 

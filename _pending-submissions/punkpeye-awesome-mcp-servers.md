@@ -43,7 +43,7 @@ git push -u origin add-agentbroker
 MSYS_NO_PATHCONV=1 gh pr create \
   --repo punkpeye/awesome-mcp-servers \
   --title "Add Agent Broker  -  live GLEIF/SEC verification + OFAC sanctions + trade restriction MCP server" \
-  --body "Agent Broker is a hosted streamable-HTTP MCP server with 20 tools for company verification (GLEIF LEI + SEC EDGAR), live sanctions screening (OFAC SDN + EU + UN + UK + 40+ lists), cross-border trade-restriction mapping, and outbound-communication compliance (TCPA/GDPR/CASL across 22 jurisdictions). 11 read tools are free with no key. Write tools (SMS, booking, voice calls) need a free email-verified key or paid plan. Endpoint: https://hatchloop.dev/mcp/agent-broker"
+  --body "Agent Broker is a hosted streamable-HTTP MCP server with 21 tools for company verification (GLEIF LEI + SEC EDGAR), live sanctions screening (OFAC SDN + EU + UN + UK + 40+ lists), cross-border trade-restriction mapping, and outbound-communication compliance (TCPA/GDPR/CASL across 22 jurisdictions). 11 read tools are free with no key. Write tools (SMS, booking, voice calls) need a free email-verified key or paid plan. Endpoint: https://hatchloop.dev/mcp/agent-broker"
 ```
 
 ---
