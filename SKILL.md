@@ -1,6 +1,6 @@
 # AgentBroker
 
-Verified GLEIF+SEC company records and OFAC/EU/UK sanctions + cross-border trade-restriction screening as deterministic MCP calls  -  structured every time, no browser to babysit. 8 utility tools free (no key). Premium data tools free up to a daily limit, then $0.02/call.
+Verified GLEIF+SEC company records and OFAC/EU/UK sanctions + cross-border trade-restriction screening as deterministic MCP calls  -  structured every time, no browser to babysit. 11 utility tools free (no key). Premium data tools free up to a daily limit, then $0.02/call.
 
 ---
 
@@ -14,9 +14,9 @@ AgentBroker is a streamable-HTTP MCP server that gives any agent a verified laye
 
 ---
 
-## Utility tools  -  no key required, unmetered (8 tools)
+## Utility tools  -  no key required, unmetered (11 tools)
 
-These 8 tools are always free with no daily limit. They are the discovery hook and safe pre-flight checks.
+These 11 tools are always free with no daily limit. They are the discovery hook and safe pre-flight checks.
 
 | Tool | What it does |
 |---|---|
@@ -28,6 +28,9 @@ These 8 tools are always free with no daily limit. They are the discovery hook a
 | `get_status` | Poll the status of an in-flight async operation (booking, call, message). |
 | `get_outcome` | Retrieve the final structured outcome of a completed async operation. |
 | `self_test` | Health check. Confirms the server is reachable and returning valid responses. |
+| `check_quota` | Returns the caller's current quota state: calls used today, calls remaining, daily limit, and tier (free/credits/unlimited). |
+| `mint_key` | Self-serve API key issuance for an autonomous agent with no email inbox, via a server-side mint secret. |
+| `lookup_us_contracts` | Search US federal contract awards by recipient company name via the free USASpending.gov public API. |
 
 ---
 
@@ -45,23 +48,33 @@ These tools hit live primary data sources (GLEIF, SEC EDGAR, OFAC, European Comm
 
 ---
 
-## Write tools  -  free key tier and paid tier (8 tools)
+## Free tools that require a key (2 tools)
 
-These tools perform real outbound actions. They require an `X-Agent-Identity` bearer token.
+These are free to call - no credits, no per-call price - but need an `X-Agent-Identity` bearer token, unlike the utility tools above.
+
+| Tool | What it does |
+|---|---|
+| `get_conversation` | Read a two-way conversation thread you started: its state, every message exchanged, and how many replies the business has sent. |
+| `import_booking_url` | Parse any public booking URL into a structured booking object an agent can act on. Run `check_booking_link` first. |
+
+---
+
+## Write tools  -  priced per call (7 tools)
+
+These tools perform real outbound actions and are priced per call ($0.02-$0.2), not free. They require an `X-Agent-Identity` bearer token.
 
 **Free key:** 100 ops/day  -  email-verified at https://hatchloop.dev/agent-broker/  
 **Paid (credits):** Starter $9 -> 1,000 credits / Growth $29 -> 3,500 / Scale $99 -> 13,000  -  buy at https://hatchloop.dev/pricing;
 
-| Tool | What it does |
-|---|---|
-| `send_message` | Send SMS, email, or voice message with automatic TCPA/GDPR pre-check applied first. |
-| `capture_lead` | Hand a prospect off to a specific SMB with deduplication. |
-| `schedule_appointment` | Book, reschedule, or cancel an appointment via Cal.com or compatible booking platforms. |
-| `send_transactional_confirmation` | TCPA-exempt transactional message (booking receipt, reminder). |
-| `handle_inbound` | Classify an inbound customer message as booking, cancel, opt-out, or question. |
-| `escalate_to_human` | Hand off to a human operator when the agent is stuck or the user requests it. |
-| `import_booking_url` | Parse any public booking URL into a structured booking object an agent can act on. Run `check_booking_link` first. |
-| `call_business` | Place a voice-AI phone call to a business on behalf of an agent. Requires provider config. |
+| Tool | Price | What it does |
+|---|---|---|
+| `send_message` | from $0.02/call | Send SMS, email, or voice message with automatic TCPA/GDPR pre-check applied first. |
+| `capture_lead` | $0.05/call | Hand a prospect off to a specific SMB with deduplication. |
+| `schedule_appointment` | from $0.15/call | Book, reschedule, or cancel an appointment via Cal.com or compatible booking platforms. |
+| `send_transactional_confirmation` | $0.02/call | TCPA-exempt transactional message (booking receipt, reminder). |
+| `handle_inbound` | $0.03/call | Classify an inbound customer message as booking, cancel, opt-out, or question. |
+| `escalate_to_human` | $0.2/call | Hand off to a human operator when the agent is stuck or the user requests it. |
+| `call_business` | $0.2/call | Place a voice-AI phone call to a business on behalf of an agent. Requires provider config. |
 
 ---
 
