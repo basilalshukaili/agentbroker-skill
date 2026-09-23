@@ -14,9 +14,9 @@ AgentBroker is a streamable-HTTP MCP server that gives any agent a verified laye
 
 ---
 
-## Utility tools  -  no key required, unmetered (11 tools)
+## Utility tools  -  no key required, unmetered (11 free tools)
 
-These 11 tools are always free with no daily limit. They are the discovery hook and safe pre-flight checks.
+These 11 tools are free with no daily limit. They are the discovery hook and safe pre-flight checks.
 
 | Tool | What it does |
 |---|---|
